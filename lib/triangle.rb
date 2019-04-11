@@ -9,7 +9,6 @@ class Triangle
   
   def kind
     if (side1 + side2) <= side3 || (side1 + side3) <= side2 || (side2 + side3) <= side1
-<<<<<<< HEAD
       begin 
         raise TriangleError
       rescue TriangleError => error
@@ -20,7 +19,6 @@ class Triangle
         raise TriangleError
       rescue TriangleError => error
         puts error.message
-=======
       begin
         raise TriangleError
       rescue TriangleError
@@ -29,7 +27,6 @@ class Triangle
       begin
         raise TriangleError
       rescue
->>>>>>> 58dee8cb5e1f230e8715673aae9af98a783bc50c
       end
     else
       if side1 == side2 && side2 == side3
@@ -43,7 +40,6 @@ class Triangle
   end
   
   class TriangleError < StandardError
-<<<<<<< HEAD
     def message 
       "The sum of two sides of a triangle must be greater than the third side. All sides must be greater than 0."
     end
@@ -51,13 +47,9 @@ class Triangle
 end
 
 triangle = Triangle.new(1, 0, 3)
-=======
     # def message 
     #   "The sum of two sides of a triangle must be greater than the third side. No side of a triangle can equal 0."
     # end
-  end
-end
 
 triangle = Triangle.new(1, 1, 3)
->>>>>>> 58dee8cb5e1f230e8715673aae9af98a783bc50c
 puts triangle.kind
